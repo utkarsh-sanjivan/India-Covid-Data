@@ -17,7 +17,7 @@ const SwitchButton = ({
         onChange(!toggle);
       }
     }
-  }, [defaultChecked]);
+  }, [defaultChecked, onChange, toggle]);
 
   const triggerToggle = () => {
     if ( disabled ) { return; }

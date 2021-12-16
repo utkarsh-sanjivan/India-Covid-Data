@@ -27,16 +27,18 @@ const Table = ({
   useEffect(() => {
     const viewData = [];
     const tempStates = stateData.states.length? stateData.states: data.states;
-    tempStates.forEach(state => {
-      viewData.push(state.state_name);
-      viewData.push({ daily: state.confirmed_daily, total: state.confirmed_total, varyingIcons: false, className: 'confirmed-daily' });
-      viewData.push({ daily: state.active_cases_daily, total: state.active_cases_total, varyingIcons: true, className: state.active_cases_daily>0? 'active-cases-daiy-up': 'active-cases-daiy-down' });
-      viewData.push({ daily: state.recovered_daily, total: state.recovered_total, varyingIcons: false, className: 'recovered-daily' });
-      viewData.push({ daily: state.death_daily, total: state.death_total, varyingIcons: false, className: 'death-daily' });
-    });
-    const tempData = { ...data, viewData };
-    setStateData(tempData);
-  }, []);
+    if (stateData.states.length === 0) {
+      tempStates.forEach(state => {
+        viewData.push(state.state_name);
+        viewData.push({ daily: state.confirmed_daily, total: state.confirmed_total, varyingIcons: false, className: 'confirmed-daily' });
+        viewData.push({ daily: state.active_cases_daily, total: state.active_cases_total, varyingIcons: true, className: state.active_cases_daily>0? 'active-cases-daiy-up': 'active-cases-daiy-down' });
+        viewData.push({ daily: state.recovered_daily, total: state.recovered_total, varyingIcons: false, className: 'recovered-daily' });
+        viewData.push({ daily: state.death_daily, total: state.death_total, varyingIcons: false, className: 'death-daily' });
+      });
+      const tempData = { ...data, viewData };
+      setStateData(tempData);
+    }
+  }, [data, stateData.states, stateData, setStateData]);
 
   const handleSortClick = sortId => {
     const viewData = [];
