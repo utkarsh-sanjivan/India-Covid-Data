@@ -1,0 +1,112 @@
+@import '../../../variables';
+
+.Navbar {
+  align-items: center;
+  flex-direction: row;
+  width: 96px;
+  height: 100vh;
+  justify-content: space-between;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .navbar-left {
+    color: ̉$gray-mid;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1.5rem;
+    text-align: center;
+    width: 3rem;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+
+  .navbar-middle {
+    color: $gray;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    span {
+      color: $pblue;
+    }
+  }
+
+  .navbar-right {
+    color: $gray;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1.5rem;
+    text-align: center;
+    width: 3rem;
+  }
+}
+
+@media (min-width: 769px) {
+    .Navbar {
+      background: $gray-light-opaque;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-start;
+      min-width: 5rem;
+      position: fixed;
+      z-index: 999;
+
+      .navbar-left {
+        margin-bottom: 0.5rem;
+        margin-top: auto;
+        order: 3;
+        text-align: center;
+      }
+
+      .navbar-middle {
+        font-size: 0.6rem;
+        order: 1;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        text-align: center;
+        width: 46px;
+        word-wrap: break-word;
+        margin: 0 auto;
+      }
+
+      .navbar-right {
+        align-items: center;
+        background: $gray-light-opaque;
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        padding-bottom: 0;
+        padding-top: 0;
+
+        span {
+          display: flex;
+          flex-direction: row;
+          height: 1.5rem;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+          margin-top: 1.5rem;
+
+          &:hover {
+            color: $pblue-dark;
+          }
+        }
+      }
+    }
+}
+
+.dark-mode {
+  background: $dark-m-gray;
+  color: $dark-text;
+
+  .expand, .Navbar, .navbar-right {
+    background: $dark-nav-bar;
+  }
+}

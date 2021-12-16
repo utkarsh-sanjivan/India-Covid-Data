@@ -1,0 +1,111 @@
+@import '../../../variables';
+
+.Graph {
+  padding-top: 50px;
+  margin: auto;
+  width: 75%;
+}
+
+.india-text {
+  font-family: "archia";
+  background-color: $brick-light;
+  color: $brick;
+  font-size: 24px;
+  font-weight: 900;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+}
+
+.last-update-text {
+  padding-top: 4px 10px;
+  color: $heading-text;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.toogle-button-container {
+  display: flex;
+  padding: 5px 0;
+  margin: 10px 0;
+}
+
+.toggle-button-label {
+  font-family: "archia";
+  padding: 0 5px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;;
+  color: $dark-toggle;
+}
+
+.bar-graph {
+  margin-top: 16px;
+  border-radius: 5px;
+}
+
+.line-bar-graph-container {
+  position: relative;
+}
+
+.line-bar-switch {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.25;
+}
+
+.line-bar-switch:hover {
+  opacity: 1;
+}
+
+.donught-graph {
+  margin-bottom: 16px;
+}
+
+.confirmed-graph {
+  background-color: $graph-red-light;
+}
+
+.active-graph {
+  background-color: $graph-blue-light;
+}
+
+.recovered-graph {
+  background-color: $graph-green-light;
+}
+
+.death-graph {
+  background-color: $gray-light-opaque;
+}
+
+.dark-mode {
+  .toggle-button-label {
+    color: $yellow;
+  }
+
+  .confirmed-graph {
+    background-color: $graph-red-dark;
+  }
+  
+  .active-graph {
+    background-color: $graph-blue-dark;
+  }
+  
+  .recovered-graph {
+    background-color: $graph-green-dark;
+  }
+  
+  .death-graph {
+    background-color: $graph-grey-dark;
+  }
+}
+
+@media (max-width: 991px) {
+  .Graph {
+    width: 75%;
+  } 
+}

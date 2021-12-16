@@ -1,0 +1,33 @@
+@import '../../../variables';
+
+.Header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $white;
+}
+
+.home-icon {
+  color: $black;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.sun-moon {
+  cursor: pointer;
+}
+
+.sun-moon > div > svg {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.dark-mode {
+  .Header {
+    background-color: $dark-m-gray;
+  }
+  
+  .home-icon {
+    color: #ffc107;
+  }
+}

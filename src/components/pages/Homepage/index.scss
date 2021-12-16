@@ -1,0 +1,270 @@
+@import '../../../variables';
+
+.Homepage {
+  left: 96px;
+  width: 100%;
+  display: flex;
+}
+
+.homepage-left-pane {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.homepage-right-pane {
+  width: 50%;
+}
+
+.MapSwitcher {
+  width: 75%;
+  height: 224px;
+  cursor: pointer;
+  margin: 50px auto 0px auto;
+  display: flex;
+  transition: background .15s ease-in-out;
+}
+
+.clickable {
+  transition: background .15s ease-in-out;
+}
+
+.map-switcher-box {
+  height: 100%;
+}
+
+.map-switcher-box > div {
+  font-family: "archia";
+  font-weight: 900;
+  text-transform: capitalize;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-switcher-box > #name {
+  height: 20%;
+  font-size: 16px;
+}
+
+.map-switcher-box > #daily {
+  height: 20%;
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.map-switcher-box > #total {
+  height: 40%;
+  font-size: 24px;
+}
+
+.is-confirmed {
+  color: $cherry;
+}
+
+.is-confirmed:hover, .is-confirmed-selected {
+  border-radius: 5px;
+  background-color: $cherry-light;
+}
+
+.is-active_cases {
+  color: $blue;
+}
+
+.is-active_cases:hover, .is-active_cases-selected {
+  border-radius: 5px;
+  background-color: $blue-light;
+}
+
+.is-recovered {
+  color: $green;
+}
+
+.is-recovered:hover, .is-recovered-selected {
+  border-radius: 5px;
+  background-color: $green-light;
+}
+
+.is-death {
+  color: $gray;
+}
+
+.is-death:hover, .is-death-selected {
+  border-radius: 5px;
+  background-color: $gray-light;
+}
+
+.fadeInUp {
+  animation-duration: 0.45s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+}
+
+.table {
+  display: grid;
+  grid-template-rows: 75px repeat(36, 50px);
+  grid-template-columns: 200px repeat(4, 100px);
+  grid-gap: 4px;
+  margin: 50px auto;
+  width: 75%;
+  overflow-x: scroll;
+}
+
+.TableLoader {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cell {
+  background: $light;
+  border-radius: 3px;
+  position: relative;
+  font-family: "archia";
+  overflow-y: scroll;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.body {
+  color: $heading-text;
+  padding: 0.5rem;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: right;
+}
+
+.heading {
+  color: $heading-text;
+  padding: 0.5rem;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: right;
+}
+
+.sort-icon {
+  margin-left: .25rem;
+  margin-right: .25rem;
+  position: absolute;
+  top: 0;
+  left: unset;
+  right: 0;
+}
+
+.confirmed-daily, .active-cases-daiy-up {
+  color: $cherry;
+}
+
+.recovered-daily, .active-cases-daiy-down {
+  color: $green;
+}
+
+.death-daily {
+
+}
+
+@media (min-width: 1650px) {
+  .table {
+    grid-template-columns: 32.33% repeat(4, 16.67%);
+  }
+}
+
+@media (max-width: 1320px) {
+  .MapSwitcher {
+    height: 150px;
+  }
+
+  .map-switcher-box > #name, .map-switcher-box > #daily {
+    font-size: 12px;
+  }
+
+  .map-switcher-box > #total {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .MapSwitcher {
+    height: 150px;
+  }
+
+  .Homepage {
+    flex-direction: column;
+  }
+
+  .homepage-left-pane, .homepage-right-pane {
+    width: 100%;
+  }
+
+  .table {
+    grid-template-columns: 32.33% repeat(4, 16.67%);
+  }
+
+  .map-switcher-box > #name, .map-switcher-box > #daily {
+    font-size: 16px;
+  }
+
+  .map-switcher-box > #total {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .MapSwitcher {
+    height: 150px;
+  }
+
+  .table {
+    grid-template-columns: 150px repeat(4, 75px);
+  }
+
+  .body {
+    font-size: 12px;
+  }
+  
+  .heading {
+    font-size: 14px;
+  }
+
+  .map-switcher-box > #name, .map-switcher-box > #daily {
+    font-size: 10px;
+  }
+
+  .map-switcher-box > #total {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  .MapSwitcher {
+    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: 0 auto auto auto auto;
+  }
+
+  .clickable {
+    width: 100px !important;
+  }
+}
+
+.dark-mode {
+  .Homepage {
+    background-color: $dark-m-gray;
+  }
+
+  .TableLoader {
+    svg {
+      rect {
+        fill: $dark-nav-bar !important;
+      }
+    }
+    margin: 50px;
+  }
+
+  .cell {
+    background: $dark-nav-bar;
+  }
+}
