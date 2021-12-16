@@ -36,7 +36,7 @@ jobs:
         git remote set-url origin https://${github_token}@github.com/${repository}
         npm run deploy
       env:
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+        user_name: 'utkarsh-sanjivan'
+        user_email: 'utkarsh.sannu@gmail.com'
         github_token: ${{ secrets.TOKEN_FOR_REPO_DEPLOY }}
         repository: 'utkarsh-sanjivan/India-Covid-Data'
