@@ -2,7 +2,7 @@
   "name": "india-covid",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://utkarsh-sanjivan.github.io/india-covid-data",
+  "homepage": "https://utkarsh-sanjivan.github.io/India-Covid-Data/",
   "dependencies": {
     "@primer/octicons-react": "^16.1.1",
     "@testing-library/jest-dom": "^5.15.0",
