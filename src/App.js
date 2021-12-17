@@ -11,7 +11,7 @@ const App = () => {
   const location = useLocation();
   const pages = [
     {
-      pageLink: '/',
+      pageLink: '/India-Covid-Data/',
       view: Homepage,
       displayName: 'Homepage',
       showInNavbar: true,
