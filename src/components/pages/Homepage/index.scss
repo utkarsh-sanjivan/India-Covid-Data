@@ -4,15 +4,57 @@
   left: 96px;
   width: 100%;
   display: flex;
+  padding-bottom: 40px;
+}
+
+.banner-container {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  width: 100%;
+}
+
+.note-text-header {
+  padding: 10px;
+  margin: 0 1px 0 0;
+}
+
+.note-text {
+  padding: 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.confirmed-banner {
+  color: $cherry;
+  background-color: $cherry-light;
+}
+
+.active_cases-banner {
+  color: $blue;
+  background-color: $blue-light;
+}
+
+.recovered-banner {
+  color: $green;
+  background-color: $green-light;
+}
+
+.death-banner {
+  color: $gray;
+  background-color: $gray-light;
 }
 
 .homepage-left-pane {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 
 .homepage-right-pane {
+  padding-top: 10px;
   width: 50%;
 }
 
@@ -102,12 +144,17 @@
   animation-name: fadeInUp;
 }
 
+.above-table {
+  margin: 30px auto 0px auto;
+  width: 75%; 
+}
+
 .table {
   display: grid;
   grid-template-rows: 75px repeat(36, 50px);
   grid-template-columns: 200px repeat(4, 100px);
   grid-gap: 4px;
-  margin: 50px auto;
+  margin: 20px auto;
   width: 75%;
   overflow-x: scroll;
 }
