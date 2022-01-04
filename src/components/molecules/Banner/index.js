@@ -12,7 +12,7 @@ const Banner = ({
       onmouseover="this.stop();"
       onmouseout="this.start();"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a faucibus magna. Duis erat augue, facilisis at euismod faucibus, condimentum vehicula neque. Aliquam erat volutpat. Nunc nisi felis, faucibus non tincidunt sit amet, porttitor ultrices enim. Phasellus ac mauris sem. Sed at imperdiet orci, efficitur mollis libero. Pellentesque lacinia massa eu nisi consectetur accumsan eget bibendum augue.
+      The data of the Covid-19 cases have been provided by the Ministry of Health and Family Welfare, Government of India.
     </marquee>
   </div>
 }
