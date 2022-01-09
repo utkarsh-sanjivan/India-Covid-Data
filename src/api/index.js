@@ -60,6 +60,7 @@ export async function getTotalCovidData() {
     code: responseObj.code,
     name: responseObj.name,
     population: responseObj.population,
-    timeline
+    timeline,
+    updatedAt: responseObj.updated_at
   };
 }

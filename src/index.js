@@ -8,7 +8,7 @@ const App = lazy(() => retry(() => import('./App')));
 
 ReactDOM.render(
   <Suspense fallback={<div />}>
-    <BrowserRouter>
+    <BrowserRouter basename="/India-Covid-Data">
       <StrictMode>
         <App />
       </StrictMode>

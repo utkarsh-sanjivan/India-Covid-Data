@@ -5,7 +5,7 @@ import {
   SortAscIcon,
   SortDescIcon
 } from '@primer/octicons-react';
-import { formatNumber, abbreviateNumber } from '../../../utils/commonFunctions';
+import { formatNumber, formatDateToText, abbreviateNumber } from '../../../utils/commonFunctions';
 
 const TABLE_HEADER = [
   { name: 'State/UT', sortId: 'regionName' },
@@ -16,7 +16,8 @@ const TABLE_HEADER = [
 ];
 
 const Table = ({
-  data
+  data,
+  updatedAt
 }) => {
   const [sortData, setSortData] = useState({
     sortColumn: 'confirmed_total',
@@ -71,7 +72,9 @@ const Table = ({
     setStateData({ ...stateData, states, viewData });
   };
 
-  return <div className="table fadeInUp">
+  return <>
+    <div className="last-update-text above-table">Last Updated on {formatDateToText(updatedAt)}</div>
+    <div className="table fadeInUp">
     {TABLE_HEADER.map(header =>
       <div
         className="cell heading"
@@ -112,6 +115,7 @@ const Table = ({
         </div>
     })}
     </div>
+  </>
 }
 
 export default Table;

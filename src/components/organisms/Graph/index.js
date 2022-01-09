@@ -4,15 +4,17 @@ import './index.scss';
 import { retry, formatDateToText } from '../../../utils/commonFunctions';
 
 const BarGraph = lazy(() => retry(() => import('../../molecules/BarGraph')));
-const DonutGraph = lazy(() => retry(() => import('../../molecules/DonutGraph')));
+const PieGraph = lazy(() => retry(() => import('../../molecules/PieGraph')));
 const RangeButton = lazy(() => retry(() => import('../../molecules/RangeButtons')));
 const SwitchButton = lazy(() => retry(() => import('../../atoms/SwitchButton')));
 
 const Graphs = ({
   timeline,
-  donughtLabel,
-  donughtDailyData,
-  donughtTotalData
+  updatedAt,
+  currentStatistic,
+  pieLabel,
+  pieDailyData,
+  pieTotalData
 }) => {
   const [timelineData, setTimelineData] = useState(null);
   const [graphData, setGraphData] = useState({
@@ -57,7 +59,7 @@ const Graphs = ({
       !timelineData? <div>Loading...</div>
       :<>
         <div className="india-text">India</div>
-        <div className="last-update-text">Last Updated on {formatDateToText(timelineData[0].dateObj)}</div>
+        <div className="last-update-text">Last Updated on {formatDateToText(updatedAt)}</div>
         <div className="toogle-button-container">
           <div className="toggle-button-label">Daily</div>
           <SwitchButton 
@@ -68,6 +70,10 @@ const Graphs = ({
             />
           <div className="toggle-button-label">Commulative</div>
         </div>
+        <RangeButton 
+          onClick={handleRangeChange}
+          isSelected={0}
+        />
         <BarGraph
           labels={timelineData.map(time => time.date)}
           data={graphData.confirmed}
@@ -96,19 +102,15 @@ const Graphs = ({
           backgroundColor={'#6c757d'}
           className={'death-graph'}
         />
-        <RangeButton 
-          onClick={handleRangeChange}
-          isSelected={0}
+        <PieGraph
+          title={`${currentStatistic} Daily Comparison`}
+          pieLabel={pieLabel}
+          pieData={pieDailyData}
         />
-        <DonutGraph
-          title={'Daily Comparison'}
-          donughtLabel={donughtLabel}
-          donughtData={donughtDailyData}
-        />
-        <DonutGraph
-          title={'Total Comparison'}
-          donughtLabel={donughtLabel}
-          donughtData={donughtTotalData}
+        <PieGraph
+          title={`${currentStatistic} Total Comparison`}
+          pieLabel={pieLabel}
+          pieData={pieTotalData}
         />
       </>
     }

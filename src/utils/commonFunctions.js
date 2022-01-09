@@ -43,7 +43,7 @@ export const getIndiaDateYesterdayISO = () => {
 };
 
 export const formatDateToText = date => {
-  const dateObj = new Date(date);
+  const dateObj = date? new Date(date): new Date();
   const day = format(dateObj, 'dd');
   const month = format(dateObj, 'LLLL');
   const year = getYear(dateObj).toString().slice(-2);
