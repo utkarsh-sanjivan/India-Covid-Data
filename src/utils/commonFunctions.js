@@ -3,6 +3,7 @@ import {
   format,
   formatISO,
   subDays,
+  parseISO
 } from 'date-fns';
 import { utcToZonedTime } from 'date-fns-tz';
 
@@ -44,10 +45,14 @@ export const getIndiaDateYesterdayISO = () => {
 
 export const formatDateToText = date => {
   const dateObj = date? new Date(date): new Date();
+  const second = format(dateObj, 's')<9? `0${format(dateObj, 's')}`: format(dateObj, 's');
+  const minute = format(dateObj, 'm')<9? `0${format(dateObj, 'm')}`: format(dateObj, 'm');
+  const hour = format(dateObj, 'h')<9? `0${format(dateObj, 'h')}`: format(dateObj, 'h');
+  const amPm = format(dateObj, 'a');
   const day = format(dateObj, 'dd');
   const month = format(dateObj, 'LLLL');
   const year = getYear(dateObj).toString().slice(-2);
-  return `${day} ${month} ${year}`;
+  return `${day} ${month} ${year}, ${hour}:${minute}:${second} ${amPm}`;
 }
 
 export const abbreviateNumber = (number) => {
