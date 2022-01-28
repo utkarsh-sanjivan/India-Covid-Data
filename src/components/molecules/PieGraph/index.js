@@ -17,7 +17,7 @@ const PieGraph = (props) => {
   const totalSum = data.reduce((previousValue, currentValue) => previousValue + currentValue, 0);
   const options = {
     legend: {
-      display: true,
+      display: false,
       position: "right"
     },
     plugins: {

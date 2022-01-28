@@ -14,6 +14,10 @@
   width: 100%;
 }
 
+.overlay::before, .overlay::after {
+  visibility: hidden;
+}
+
 .note-text-header {
   padding: 10px;
   margin: 0 1px 0 0;
