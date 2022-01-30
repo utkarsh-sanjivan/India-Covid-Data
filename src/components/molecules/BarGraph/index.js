@@ -122,7 +122,7 @@ const BarGraph = ({
         onChange={() => setIsBar(!isBar)}
         disabled={false}
         className={'line-bar-switch'}
-        />
+      />
       <div className="toggle-button-label">Bar</div>
     </div>
   </div>;

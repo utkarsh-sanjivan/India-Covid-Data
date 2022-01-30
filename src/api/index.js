@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { mapStateId } from '../utils/commonFunctions';
 
 export async function getTodayCovidData() {
   const states_data =  await axios.get('https://www.mohfw.gov.in/data/datanew.json');
@@ -16,6 +17,7 @@ export async function getTodayCovidData() {
   }
   states_data.data.forEach(state => {
     responseObj.states.push({
+      id: mapStateId(state),
       state_name: state.state_name,
       state_code: state.state_code,
       confirmed_total: state.new_positive,
