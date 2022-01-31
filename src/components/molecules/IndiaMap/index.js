@@ -5,16 +5,15 @@ import ReactTooltip from 'react-tooltip';
 
 import { retry } from '../../../utils/commonFunctions';
 
-const LinearGradient = lazy(() => retry(() => import('./LinearGradient')));
+const LinearGradient = lazy(() => retry(() => import('../../atoms/LinearGradient')));
 const SwitchButton = lazy(() => retry(() => import('../../atoms/SwitchButton')));
 
 const INDIA_TOPO_JSON = require('./india.topo.json');
 
 const PROJECTION_CONFIG = {
-  scale: 1180,
-  center: [82.8, 21.7]
+    scale: 1180,
+    center: [82.8, 21.7]
 };
-
 
 const DEFAULT_COLOR = '#EEE';
 

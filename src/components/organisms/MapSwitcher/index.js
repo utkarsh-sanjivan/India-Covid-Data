@@ -3,7 +3,7 @@ import { memo, useState } from 'react';
 import { animated} from 'react-spring';
 import { useMeasure } from 'react-use';
 
-import { LEVEL_STATISTICS } from '../../../constants';
+import { LEVEL_STATISTICS } from '../../../constant';
 import { formatNumber } from '../../../utils/commonFunctions';
 
 const MapSwitcher = ({

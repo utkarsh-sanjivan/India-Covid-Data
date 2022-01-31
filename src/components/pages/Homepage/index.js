@@ -3,6 +3,7 @@ import React, { lazy, useEffect, useState, Suspense } from 'react';
 import { getTodayCovidData, getTotalCovidData } from '../../../api';
 import { retry } from '../../../utils/commonFunctions';
 import { mapColors } from '../../../constant/color';
+// import { pieStatisticObject }  from '../../../constant';
 import './index.scss';
 
 const Banner = lazy(() => retry(() => import('../../molecules/Banner')));
@@ -10,13 +11,6 @@ const Graph = lazy(() => retry(() => import('../../organisms/Graph')));
 const MapSwitcher = lazy(() => retry(() => import('../../organisms/MapSwitcher')));
 const Table = lazy(() => retry(() => import('../../organisms/Table')));
 const TableLoader = lazy(() => retry(() => import('../../molecules/TableLoader')));
-
-// const pieStatisticObject = {
-//   'active_cases': 'Active Cases',
-//   'recovered': 'Recovered',
-//   'death': 'Death',
-//   'confirmed': 'Confirmed'
-// }
 
 function Homepage() {
   const [data, setData] = useState(null);
