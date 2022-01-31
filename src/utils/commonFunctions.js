@@ -6,6 +6,7 @@ import {
   parseISO
 } from 'date-fns';
 import { utcToZonedTime } from 'date-fns-tz';
+import { stateIds } from '../constant';
 
 const numberFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 1 });
 
@@ -85,3 +86,5 @@ export const formatNumber = (value, option = '') => {
     return numberFormatter.format(value);
   }
 };
+
+export const mapStateId = state => stateIds.find(stateId => stateId.state === state.state_name).id;

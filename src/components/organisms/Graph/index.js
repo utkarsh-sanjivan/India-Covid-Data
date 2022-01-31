@@ -7,6 +7,7 @@ const BarGraph = lazy(() => retry(() => import('../../molecules/BarGraph')));
 const PieGraph = lazy(() => retry(() => import('../../molecules/PieGraph')));
 const RangeButton = lazy(() => retry(() => import('../../molecules/RangeButtons')));
 const SwitchButton = lazy(() => retry(() => import('../../atoms/SwitchButton')));
+const IndiaMap = lazy(() => retry(() => import('../../molecules/IndiaMap')));
 
 const Graphs = ({
   timeline,
@@ -14,7 +15,10 @@ const Graphs = ({
   currentStatistic,
   pieLabel,
   pieDailyData,
-  pieTotalData
+  pieTotalData,
+  mapData,
+  mapColorArray,
+  handleIsDailySwitch
 }) => {
   const [timelineData, setTimelineData] = useState(null);
   const [graphData, setGraphData] = useState({
@@ -60,6 +64,11 @@ const Graphs = ({
       :<>
         <div className="india-text">India</div>
         <div className="last-update-text">Last Updated on {formatDateToText(updatedAt)}</div>
+        <IndiaMap
+          mapData={mapData}
+          mapColorArray={mapColorArray}
+          handleIsDailySwitch={handleIsDailySwitch}
+        />
         <div className="toogle-button-container">
           <div className="toggle-button-label">Daily</div>
           <SwitchButton 
@@ -102,7 +111,7 @@ const Graphs = ({
           backgroundColor={'#6c757d'}
           className={'death-graph'}
         />
-        <PieGraph
+        {/* <PieGraph
           title={`${currentStatistic} Daily Comparison`}
           pieLabel={pieLabel}
           pieData={pieDailyData}
@@ -111,7 +120,7 @@ const Graphs = ({
           title={`${currentStatistic} Total Comparison`}
           pieLabel={pieLabel}
           pieData={pieTotalData}
-        />
+        /> */}
       </>
     }
   </div>

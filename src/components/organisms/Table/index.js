@@ -6,14 +6,7 @@ import {
   SortDescIcon
 } from '@primer/octicons-react';
 import { formatNumber, formatDateToText, abbreviateNumber } from '../../../utils/commonFunctions';
-
-const TABLE_HEADER = [
-  { name: 'State/UT', sortId: 'regionName' },
-  { name: 'Confirmed', sortId: 'confirmed_total' },
-  { name: 'Active', sortId: 'active_cases_total' },
-  { name: 'Recovered', sortId: 'recovered_total' },
-  { name: 'Deceased', sortId: 'death_total' }
-];
+import { TABLE_HEADER } from '../../../constant';
 
 const Table = ({
   data,
