@@ -29,6 +29,21 @@ export async function getTodayCovidData() {
       death_total: state.new_death,
       death_daily: state.new_death - state.death
     });
+    if (state.state_name === 'Dadra and Nagar Haveli and Daman and Diu') {
+      responseObj.states.push({
+        id: 'DD',
+        state_name: state.state_name,
+        state_code: state.state_code,
+        confirmed_total: state.new_positive,
+        confirmed_daily: state.new_positive - state.positive,
+        active_cases_total: state.new_active,
+        active_cases_daily: state.new_active - state.active,
+        recovered_total: state.new_cured,
+        recovered_daily: state.new_cured - state.cured,
+        death_total: state.new_death,
+        death_daily: state.new_death - state.death
+      });
+    }
   });
 
   responseObj.states.sort((firstEl, secondEl) => {
