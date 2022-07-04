@@ -23,6 +23,7 @@ const App = () => {
   ];
 
   useEffect(() => {
+    console.log('Registering Pageview');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
