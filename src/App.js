@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Route, Redirect, Switch, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
@@ -21,6 +21,10 @@ const App = () => {
       showInNavbar: true,
     }
   ];
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <div className="App">
