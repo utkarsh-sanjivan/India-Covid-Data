@@ -8,8 +8,8 @@
     "main.css": "/India-Covid-Data/static/css/main.ac35c5f8.chunk.css",
     "main.js": "/India-Covid-Data/static/js/main.8f7622fa.chunk.js",
     "main.js.map": "/India-Covid-Data/static/js/main.8f7622fa.chunk.js.map",
-    "runtime-main.js": "/India-Covid-Data/static/js/runtime-main.7ec9c564.js",
-    "runtime-main.js.map": "/India-Covid-Data/static/js/runtime-main.7ec9c564.js.map",
+    "runtime-main.js": "/India-Covid-Data/static/js/runtime-main.5648f3df.js",
+    "runtime-main.js.map": "/India-Covid-Data/static/js/runtime-main.5648f3df.js.map",
     "static/js/4.6f7f7fd6.chunk.js": "/India-Covid-Data/static/js/4.6f7f7fd6.chunk.js",
     "static/js/4.6f7f7fd6.chunk.js.map": "/India-Covid-Data/static/js/4.6f7f7fd6.chunk.js.map",
     "static/js/5.76f2ceb4.chunk.js": "/India-Covid-Data/static/js/5.76f2ceb4.chunk.js",
@@ -27,8 +27,8 @@
     "static/js/10.d4bac827.chunk.js": "/India-Covid-Data/static/js/10.d4bac827.chunk.js",
     "static/js/10.d4bac827.chunk.js.map": "/India-Covid-Data/static/js/10.d4bac827.chunk.js.map",
     "static/css/11.188dc367.chunk.css": "/India-Covid-Data/static/css/11.188dc367.chunk.css",
-    "static/js/11.20fdff46.chunk.js": "/India-Covid-Data/static/js/11.20fdff46.chunk.js",
-    "static/js/11.20fdff46.chunk.js.map": "/India-Covid-Data/static/js/11.20fdff46.chunk.js.map",
+    "static/js/11.f14a18c6.chunk.js": "/India-Covid-Data/static/js/11.f14a18c6.chunk.js",
+    "static/js/11.f14a18c6.chunk.js.map": "/India-Covid-Data/static/js/11.f14a18c6.chunk.js.map",
     "static/css/12.bb2a1641.chunk.css": "/India-Covid-Data/static/css/12.bb2a1641.chunk.css",
     "static/js/12.6b9fe5b2.chunk.js": "/India-Covid-Data/static/js/12.6b9fe5b2.chunk.js",
     "static/js/12.6b9fe5b2.chunk.js.map": "/India-Covid-Data/static/js/12.6b9fe5b2.chunk.js.map",
@@ -69,7 +69,7 @@
     "static/js/7.83383826.chunk.js.LICENSE.txt": "/India-Covid-Data/static/js/7.83383826.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7ec9c564.js",
+    "static/js/runtime-main.5648f3df.js",
     "static/js/4.6f7f7fd6.chunk.js",
     "static/css/main.ac35c5f8.chunk.css",
     "static/js/main.8f7622fa.chunk.js"
