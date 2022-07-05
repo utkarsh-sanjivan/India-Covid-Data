@@ -10,7 +10,7 @@ const Homepage = lazy(() => retry(() => import('./components/pages/Homepage')));
 const Header = lazy(() => retry(() => import('./components/templates/Header')));
 
 const TRACKING_ID = "UA-233194323-1";
-const GA4_TRACKING_ID = "321226714";
+const GA4_TRACKING_ID = "G-X30FDGQRC6";
 // ReactGA.initialize(TRACKING_ID);
 ReactGA.initialize(GA4_TRACKING_ID);
 
