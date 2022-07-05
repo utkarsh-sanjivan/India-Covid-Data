@@ -28,6 +28,7 @@ const App = () => {
   useEffect(() => {
     // ReactGA.pageview(window.location.pathname + window.location.search);
     ReactGA.send({ hitType: "pageview", page: '/' });
+    ReactGA.send("pageview");
   }, []);
 
   return (
