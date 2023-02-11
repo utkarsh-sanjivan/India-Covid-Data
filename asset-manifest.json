@@ -8,8 +8,8 @@
     "main.css": "/India-Covid-Data/static/css/main.ac35c5f8.chunk.css",
     "main.js": "/India-Covid-Data/static/js/main.23f07429.chunk.js",
     "main.js.map": "/India-Covid-Data/static/js/main.23f07429.chunk.js.map",
-    "runtime-main.js": "/India-Covid-Data/static/js/runtime-main.5240d1dc.js",
-    "runtime-main.js.map": "/India-Covid-Data/static/js/runtime-main.5240d1dc.js.map",
+    "runtime-main.js": "/India-Covid-Data/static/js/runtime-main.9c699445.js",
+    "runtime-main.js.map": "/India-Covid-Data/static/js/runtime-main.9c699445.js.map",
     "static/js/4.6f7f7fd6.chunk.js": "/India-Covid-Data/static/js/4.6f7f7fd6.chunk.js",
     "static/js/4.6f7f7fd6.chunk.js.map": "/India-Covid-Data/static/js/4.6f7f7fd6.chunk.js.map",
     "static/js/5.76f2ceb4.chunk.js": "/India-Covid-Data/static/js/5.76f2ceb4.chunk.js",
@@ -43,8 +43,8 @@
     "static/js/16.89ebce69.chunk.js.map": "/India-Covid-Data/static/js/16.89ebce69.chunk.js.map",
     "static/js/17.b053f138.chunk.js": "/India-Covid-Data/static/js/17.b053f138.chunk.js",
     "static/js/17.b053f138.chunk.js.map": "/India-Covid-Data/static/js/17.b053f138.chunk.js.map",
-    "static/js/18.f38c1a1c.chunk.js": "/India-Covid-Data/static/js/18.f38c1a1c.chunk.js",
-    "static/js/18.f38c1a1c.chunk.js.map": "/India-Covid-Data/static/js/18.f38c1a1c.chunk.js.map",
+    "static/js/18.548405ed.chunk.js": "/India-Covid-Data/static/js/18.548405ed.chunk.js",
+    "static/js/18.548405ed.chunk.js.map": "/India-Covid-Data/static/js/18.548405ed.chunk.js.map",
     "static/js/19.09a01b70.chunk.js": "/India-Covid-Data/static/js/19.09a01b70.chunk.js",
     "static/js/19.09a01b70.chunk.js.map": "/India-Covid-Data/static/js/19.09a01b70.chunk.js.map",
     "static/js/20.402fe47f.chunk.js": "/India-Covid-Data/static/js/20.402fe47f.chunk.js",
@@ -69,7 +69,7 @@
     "static/js/7.83383826.chunk.js.LICENSE.txt": "/India-Covid-Data/static/js/7.83383826.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5240d1dc.js",
+    "static/js/runtime-main.9c699445.js",
     "static/js/4.6f7f7fd6.chunk.js",
     "static/css/main.ac35c5f8.chunk.css",
     "static/js/main.23f07429.chunk.js"
