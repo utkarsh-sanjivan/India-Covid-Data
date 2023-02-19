@@ -17,4 +17,4 @@ To access the page visit,
 [India-Covid-Data](https://utkarsh-sanjivan.github.io/India-Covid-Data/)
 
 # Snapshot
-![India Covid Data](https://github.com/utkarsh-sanjivan/India-Covid-Data/tree/master/public/India-Covid-Data.png?raw=true)
+![India Covid Data](public/India-Covid-Data.png?raw=true "india COvid Data")
